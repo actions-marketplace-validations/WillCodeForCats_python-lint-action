@@ -10,7 +10,7 @@ LABEL "homepage"="https://github.com/willcodeforcats/python-lint-action"
 LABEL "maintainer"="Seth Mattinen <sethm@rollernet.us>"
 
 ADD requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
