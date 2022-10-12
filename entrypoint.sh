@@ -18,9 +18,9 @@ if [ "$2" = true ] ; then
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
-        echo "Flake8 ok"
+        echo "Flake8 OK"
     else
-        echo "Flake8 error"
+        echo "Flake8 error!"
         exit $exit_code
     fi
 
@@ -34,9 +34,9 @@ if [ "$3" = true ] ; then
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
-        echo "Black ok"
+        echo "Black OK"
     else
-        echo "Black error"
+        echo "Black error!"
         exit $exit_code
     fi
 
@@ -50,9 +50,9 @@ if [ "$4" = true ] ; then
     exit_code=$?
 
     if [ "$exit_code" = "0" ]; then
-        echo "isort ok"
+        echo "isort OK"
     else
-        echo "isort error"
+        echo "isort error!"
         exit $exit_code
     fi
 
