@@ -1,5 +1,5 @@
-name: "Python Code Quality and Lint"
-description: "flake8, black, and isort"
+name: "Python Code Quality Action"
+description: "Checks repository using flake8, black, and isort"
 inputs:
   python-root-list:
     description: "A list of all paths to test"
