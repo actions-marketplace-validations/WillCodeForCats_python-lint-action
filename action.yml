@@ -1,0 +1,46 @@
+name: "Python Code Quality and Lint"
+description: "flake8, black, and isort"
+inputs:
+  python-root-list:
+    description: "A list of all paths to test"
+    required: false
+    default: "."
+  use-flake8:
+    description: "Use Flake8"
+    required: false
+    default: true
+  use-black:
+    description: "Use Black"
+    required: false
+    default: true
+  use-isort:
+    description: "Use isort"
+    required: false
+    default: true
+  extra-flake8-options:
+    description: "Extra options: flake8 $(extra-flake8-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-black-options:
+    description: "Extra options: black --check $(extra-black-options) $(python-root-list)"
+    required: false
+    default: ""
+  extra-isort-options:
+    description: "Extra options: isort -rc $(extra-isort-options) $(python-root-list) -c --diff "
+    required: false
+    default: ""
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.python-root-list }}
+    - ${{ inputs.use-flake8 }}
+    - ${{ inputs.use-black }}
+    - ${{ inputs.use-isort }}
+    - ${{ inputs.extra-flake8-options }}
+    - ${{ inputs.extra-black-options }}
+    - ${{ inputs.extra-isort-options }}
+branding:
+  icon: "terminal"
+  color: "white"
