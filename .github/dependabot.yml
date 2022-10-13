@@ -9,3 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    allow:
+      - dependency-name: "black"
+        dependency-type: "direct"
+      - dependency-name: "flake8"
+        dependency-type: "production"
+      - dependency-name: "isort"
+        dependency-type: "production"
