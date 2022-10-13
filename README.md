@@ -23,4 +23,4 @@ steps:
 
 ## Credits
 * https://github.com/ricardochaves/python-lint
-* https://github.com/wrboyce/python-lint-action*
+* https://github.com/wrboyce/python-lint-action
